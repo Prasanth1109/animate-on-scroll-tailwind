@@ -1,3 +1,11 @@
+interface Keyframe {
+    [key: string]: {
+        transform?: string;
+        opacity?: string;
+        [key: string]: string | undefined; // Allow other properties like translateX, scale, etc.
+    };
+}
+
 const animationStyle: { [key: string]: string } = {
     fadeIn: "fadeIn 1s ease-in-out",
     fadeOut: "fadeOut 1s ease-in-out",
@@ -51,7 +59,7 @@ const animationStyle: { [key: string]: string } = {
     flipOutDown: "flipOutDown 1s ease-in-out",
 };
 
-const keyframes: { [key: string]: {} } = {
+const keyframes: { [key: string]: Keyframe } = {
     fadeIn: { from: { opacity: "0" }, to: { opacity: "1" } },
     fadeOut: { from: { opacity: "1" }, to: { opacity: "0" } },
     zoomIn: { from: { transform: "scale(0.8)", opacity: "0" }, to: { transform: "scale(1)", opacity: "1" } },

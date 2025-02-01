@@ -1,7 +1,7 @@
 "use client"
 
 import { IconUser, IconBlocks, IconTimelineEvent, IconDeviceMobileMessage, IconFileCv, IconChartGridDots, IconHome } from "@tabler/icons-react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 
 interface BubbleProps {
@@ -49,7 +49,7 @@ const navData = [
 ];
 
 const AnimatedSidebar: React.FC = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [bubbles, setBubbles] = useState<BubbleProps[]>([]);
 
