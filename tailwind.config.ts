@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       animation: {
+        bubble: 'bubble 6s infinite ease-in-out',
         fadeIn: "fadeIn 1s ease-in-out",
         fadeOut: "fadeOut 1s ease-in-out",
         zoomIn: "zoomIn 1s ease-in-out",
@@ -65,6 +66,11 @@ export default {
         flipOutDown: "flipOutDown 1s ease-in-out",
       },      
       keyframes: {
+        bubble: {
+          '0%': { transform: 'translateY(0) scale(1)', opacity: '0.8' },
+          '50%': { transform: 'translateY(-200px) scale(0.8)', opacity: '0.6' },
+          '100%': { transform: 'translateY(-400px) scale(0.5)', opacity: '0' },
+        },
         fadeIn: { from: { opacity: "0" }, to: { opacity: "1" } },
         fadeOut: { from: { opacity: "1" }, to: { opacity: "0" } },
         zoomIn: { from: { transform: "scale(0.8)", opacity: "0" }, to: { transform: "scale(1)", opacity: "1" } },
